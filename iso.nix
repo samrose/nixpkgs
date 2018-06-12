@@ -11,5 +11,11 @@
   ];
   environment.systemPackages = [ pkgs.rustc 
 				 pkgs.cargo
+                                 pkgs.binutils 
+		                 pkgs.gcc 
+                                 pkgs.gnumake 
+                                 pkgs.openssl 
+                                 pkgs.pkgconfig
+                                 pkgs.git
 			       ];
 }
