@@ -17,5 +17,6 @@
                                  pkgs.openssl 
                                  pkgs.pkgconfig
                                  pkgs.git
+                                 pkgs.carnix
 			       ];
 }
