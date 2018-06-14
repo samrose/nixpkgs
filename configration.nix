@@ -1,7 +1,7 @@
 # This module defines a small NixOS installation CD.  It does not
 # contain any graphical stuff.
-{config, pkgs, ...}:
-{
+{config,pkgs, ...}:
+ {
   imports = [
     <nixpkgs/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix>
 
@@ -18,5 +18,17 @@
                                  pkgs.pkgconfig
                                  pkgs.git
                                  pkgs.carnix
-			       ];
+ 			         pkgs.vim
+                               ];
+  
+
+  services = {
+    cron.enable = true; 
+    ntp.enable = true;
+    openssh.enable = true;
+    openssh.passwordAuthentication = false;
+  };  
+
+
 }
+
