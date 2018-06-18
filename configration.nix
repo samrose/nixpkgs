@@ -9,25 +9,26 @@
     # doesn't need to run "nix-channel --update" first.
     <nixpkgs/nixos/modules/installer/cd-dvd/channel.nix>
   ];
-  environment.systemPackages = [ pkgs.rustc 
-				 pkgs.cargo
-                                 pkgs.binutils 
-		                 pkgs.gcc 
-                                 pkgs.gnumake 
-                                 pkgs.openssl 
-                                 pkgs.pkgconfig
-                                 pkgs.git
-                                 pkgs.carnix
- 			         pkgs.vim
+  environment.systemPackages = [
+                             pkgs.rust
+                             pkgs.cargo
+                             pkgs.binutils
+                             pkgs.gcc
+                             pkgs.gnumake
+                             pkgs.openssl
+                             pkgs.pkgconfig
+                             pkgs.git
+                             pkgs.carnix
+                             pkgs.vim
                                ];
-  
-
   services = {
-    cron.enable = true; 
+    cron.enable = true;
     ntp.enable = true;
     openssh.enable = true;
     openssh.passwordAuthentication = false;
-  };  
+    vault.enable = true;
+
+  };
 
 
 }
