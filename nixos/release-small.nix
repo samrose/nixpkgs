@@ -79,7 +79,8 @@ in rec {
       stdenv
       subversion
       tarball
-      vim;
+      vim
+      vulnix;#vulnix experiment
   };
 
   tested = lib.hydraJob (pkgs.releaseTools.aggregate {
