@@ -96,5 +96,6 @@ in rec {
       ]
       ++ lib.collect lib.isDerivation nixos;
   });
-
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.channel = http://ec2-18-188-14-36.us-east-2.compute.amazonaws.com/project/isotest2/channel/latest;
 }
