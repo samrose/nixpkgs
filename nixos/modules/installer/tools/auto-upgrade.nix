@@ -12,7 +12,7 @@ let cfg = config.system.autoUpgrade; in
 
       enable = mkOption {
         type = types.bool;
-        default = false;
+        default = true;
         description = ''
           Whether to periodically upgrade NixOS to the latest
           version. If enabled, a systemd timer will run
@@ -23,7 +23,7 @@ let cfg = config.system.autoUpgrade; in
 
       channel = mkOption {
         type = types.nullOr types.str;
-        default = null;
+        default = http://ec2-18-188-14-36.us-east-2.compute.amazonaws.com/project/isotest2/channel/latest;
         example = https://nixos.org/channels/nixos-14.12-small;
         description = ''
           The URI of the NixOS channel to use for automatic
