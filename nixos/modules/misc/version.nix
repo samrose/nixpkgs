@@ -85,7 +85,7 @@ in
     defaultChannel = mkOption {
       internal = true;
       type = types.str;
-      default = https://nixos.org/channels/nixos-18.03;
+      default = http://ec2-18-188-14-36.us-east-2.compute.amazonaws.com/project/isotest2/channel/latest;
       description = "Default NixOS channel to which the root user is subscribed.";
     };
 
@@ -101,7 +101,7 @@ in
       versionSuffix = mkIf (pathIsDirectory gitRepo) (mkDefault (".git." + gitCommitId));
 
       # Note: code names must only increase in alphabetical order.
-      codeName = "Impala";
+      codeName = "Holo-Alpha";
     };
 
     # Generate /etc/os-release.  See
