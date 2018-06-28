@@ -43,6 +43,8 @@
     # Some compression/archiver tools.
     pkgs.unzip
     pkgs.zip
+    #scm 
+    pkgs.git
   ];
 
   # Include support for various filesystems.
