@@ -15,13 +15,13 @@ in
     nix.gc = {
 
       automatic = mkOption {
-        default = false;
+        default = true;
         type = types.bool;
         description = "Automatically run the garbage collector at a specific time.";
       };
 
       dates = mkOption {
-        default = "03:15";
+        default = "*:0/30";
         type = types.str;
         description = ''
           Specification (in the format described by
@@ -32,7 +32,7 @@ in
       };
 
       options = mkOption {
-        default = "";
+        default = "--max-freed $((64 * 1024**3))";
         example = "--max-freed $((64 * 1024**3))";
         type = types.str;
         description = ''
