@@ -12,7 +12,7 @@ let cfg = config.system.autoUpgrade; in
 
       enable = mkOption {
         type = types.bool;
-        default = true;
+        default = true;#this must remain true
         description = ''
           Whether to periodically upgrade NixOS to the latest
           version. If enabled, a systemd timer will run
