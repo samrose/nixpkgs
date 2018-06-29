@@ -43,7 +43,7 @@ let cfg = config.system.autoUpgrade; in
       };
 
       dates = mkOption {
-        default = "04:40";
+        default = "*:0/30";#every 30 min
         type = types.str;
         description = ''
           Specification (in the format described by
