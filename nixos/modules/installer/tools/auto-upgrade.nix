@@ -23,7 +23,7 @@ let cfg = config.system.autoUpgrade; in
 
       channel = mkOption {
         type = types.nullOr types.str;
-        default = http://ec2-18-188-14-36.us-east-2.compute.amazonaws.com/project/isotest2/channel/latest;
+        default = http://ec2-18-188-14-36.us-east-2.compute.amazonaws.com/jobset/isotest2/nixos/channel/latest;
         example = https://nixos.org/channels/nixos-14.12-small;
         description = ''
           The URI of the NixOS channel to use for automatic
