@@ -85,7 +85,7 @@ in
     defaultChannel = mkOption {
       internal = true;
       type = types.str;
-      default = http://ec2-18-188-14-36.us-east-2.compute.amazonaws.com/project/isotest2/channel/latest;
+      default = http://ec2-18-188-14-36.us-east-2.compute.amazonaws.com/jobset/isotest2/nixos/channel/latest;
       description = "Default NixOS channel to which the root user is subscribed.";
     };
 
