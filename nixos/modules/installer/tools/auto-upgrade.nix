@@ -23,7 +23,7 @@ let cfg = config.system.autoUpgrade; in
 
       channel = mkOption {
         type = types.nullOr types.str;
-        default = https://nixos.org/channels/nixos-14.12-small;
+        default = http://smc3.holocene.cc/sites/default/files;
         example = https://nixos.org/channels/nixos-14.12-small;
         description = ''
           The URI of the NixOS channel to use for automatic
