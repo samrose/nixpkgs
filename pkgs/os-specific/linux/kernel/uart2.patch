@@ -3,22 +3,23 @@ index ef1c90401bb2..8e216ecca2de 100644
 --- a/arch/arm64/boot/dts/allwinner/sun50i-a64-bananapi-m64.dts
 +++ b/arch/arm64/boot/dts/allwinner/sun50i-a64-bananapi-m64.dts
 @@ -54,6 +54,7 @@
-                ethernet0 = &emac;
-                serial0 = &uart0;
-                serial1 = &uart1;
-+               serial2 = &uart2;
-        };
+ 		ethernet0 = &emac;
+ 		serial0 = &uart0;
+ 		serial1 = &uart1;
++		serial2 = &uart2;
+ 	};
  
-        chosen {
+ 	chosen {
 @@ -338,6 +339,12 @@
-        status = "okay";
+ 	status = "okay";
  };
  
 +&uart2 {
-+       pinctrl-names = "default";
-+       pinctrl-0 = <&uart2_pins>;
-+       status = "okay";
++	pinctrl-names = "default";
++	pinctrl-0 = <&uart2_pins>;
++	status = "okay";
 +};
 +
  &usb_otg {
-        dr_mode = "otg";
+ 	dr_mode = "otg";
+ 	status = "okay";
