@@ -13,6 +13,14 @@ buildLinux (args // rec {
     patch = ./uart2.patch;
     name = "uart2";
   }];
+  extraConfig = ''
+      NLS  y
+      NLS_DEFAULT  "utf8"
+      NLS_UTF8     m
+      NLS_CODEPAGE_437 m
+      NLS_ISO8859_1    m
+      DEVTMPFS y
+  '' + (args.extraConfig or "");
   # Should the testing kernels ever be built on Hydra?
   extraMeta.hydraPlatforms = [];
 
