@@ -195,7 +195,6 @@ let
       VGA_SWITCHEROO         = yes; # Hybrid graphics support
       DRM_GMA600             = yes;
       DRM_GMA3600            = yes;
-      SUN8I_DE2_CCU          = yes; 
       # necessary for amdgpu polaris support
       DRM_AMD_POWERPLAY = whenBetween "4.5" "4.9" yes;
       # (experimental) amdgpu support for verde and newer chipsets
